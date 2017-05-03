@@ -1,12 +1,14 @@
 {
-  "name": "phase2/pattern-lab-starter",
-  "description": "Phase2 Pattern Lab for Drupal based on Pattern Lab's Drupal Edition",
+  "name": "drupal-pattern-lab/pattern-lab-base-theme",
+  "description": "Pattern Lab-powered Drupal 8 Theme based on Pattern Lab Twig Edition",
   "keywords": [
     "pattern lab",
-    "drupal"
+    "drupal",
+    "base theme",
+    "drupal 8"
   ],
-  "homepage": "https://github.com/phase2/pattern-lab-starter",
-  "license": "GPL-2.0+",
+  "homepage": "https://github.com/drupal-pattern-lab/pattern-lab-base-theme",
+  "license": "MIT",
   "authors": [
     {
       "name": "Evan Lovely",
@@ -14,21 +16,37 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/phase2/pattern-lab-starter/issues"
+    "issues": "https://github.com/drupal-pattern-lab/pattern-lab-base-theme/issues"
   },
   "autoload": {
     "psr-0": {
       "PatternLab": "core/src/"
     }
   },
-  "require": {
-    "php": ">=5.5.9",
-    "pattern-lab/core": "^2.7.0",
-    "pattern-lab/patternengine-twig": "^2.0.0",
-    "pattern-lab/styleguidekit-twig-default": "^3.0.0",
-    "pattern-lab/drupal-twig-components": "^2.0.0",
-    "pattern-lab/plugin-faker": "^2.0",
-    "evanlovely/plugin-twig-namespaces": "^1.0"
+	"repositories": [
+		{
+		  "type": "vcs",
+		  "url": "https://github.com/drupal-pattern-lab/patternlab-php-core"
+		},
+		{
+		  "type": "vcs",
+		  "url": "https://github.com/drupal-pattern-lab/patternengine-php-twig"
+		},
+		{
+		  "type": "vcs",
+		  "url": "https://github.com/drupal-pattern-lab/styleguidekit-assets-default"
+		},
+		{
+		  "type": "vcs",
+		  "url": "https://github.com/drupal-pattern-lab/styleguidekit-twig-default"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"pattern-lab/core": "^2.0.0",
+		"pattern-lab/patternengine-twig": "^2.0.0",
+		"pattern-lab/styleguidekit-assets-default": "^3.0.0",
+		"pattern-lab/styleguidekit-twig-default": "^3.0.0"
   },
   "scripts": {
     "post-install-cmd": [
